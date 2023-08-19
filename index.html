@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
     <div class="cash-container">
       <h1>Cash Registrer App</h1>
       <h3>Cash-in-drawer</h3>
       <form class="indrawer-form">
         <div class="cid">
-            <label for="penny">PENNY</label>
-            <input type="number" class="input" id="penny">
-          </div>
-          <div class="cid">
-            <label for="nickel">NICKEL</label>
-            <input type="number" class="input" id="nickel">
-          </div>
-          <div class="cid">
-            <label for="dime">DIME</label>
-            <input type="number" class="input" id="dime">
-          </div>
-          <div class="cid">
-            <label for="quarter">QUARTE</label>
-            <input type="number" class="input" id="quarter">
-          </div>
-          <div class="cid">
-            <label for="one">ONE</label>
-            <input type="number" class="input" id="one">
-          </div>
-          <div class="cid">
-            <label for="five">FIVE</label>
-            <input type="number" class="input" id="five">
-          </div>
-          <div class="cid">
-            <label for="ten">TEN</label>
-            <input type="number" class="input" id="ten">
-          </div>
-          <div class="cid">
-            <label for="twenty">TWENTY</label>
-            <input type="number" class="input" id="twenty">
-          </div>
+          <label for="penny">PENNY</label>
+          <input type="number" class="input" id="penny" />
+        </div>
+        <div class="cid">
+          <label for="nickel">NICKEL</label>
+          <input type="number" class="input" id="nickel" />
+        </div>
+        <div class="cid">
+          <label for="dime">DIME</label>
+          <input type="number" class="input" id="dime" />
+        </div>
+        <div class="cid">
+          <label for="quarter">QUARTE</label>
+          <input type="number" class="input" id="quarter" />
+        </div>
+        <div class="cid">
+          <label for="one">ONE</label>
+          <input type="number" class="input" id="one" />
+        </div>
+        <div class="cid">
+          <label for="five">FIVE</label>
+          <input type="number" class="input" id="five" />
+        </div>
+        <div class="cid">
+          <label for="ten">TEN</label>
+          <input type="number" class="input" id="ten" />
+        </div>
+        <div class="cid">
+          <label for="twenty">TWENTY</label>
+          <input type="number" class="input" id="twenty" />
+        </div>
       </form>
       <form class="inputvalue">
         <div id="form">
-        <label for="name" class="name">Bill:</label>
-        <input type="number" placeholder="Total bill... " class="bill">
-        <label for="payment" class="pay">Payment:</label>
-        <input type="number" placeholder="Enter payment" class="payment">
-      </div>
-      <div class="change-btn"><input type="submit" value="Change" class="submit" onclick = "cashRegister()"></div>
+          <label for="name" class="name">Bill:</label>
+          <input type="number" placeholder="Total bill... " class="bill" />
+          <label for="payment" class="pay">Payment:</label>
+          <input type="number" placeholder="Enter payment" class="payment" />
+        </div>
+        <div class="change-btn">
+          <input
+            type="submit"
+            value="Change"
+            class="submit"
+            onclick="cashRegister()"
+          />
+        </div>
       </form>
       <div class="display-text"></div>
       <div class="display"></div>
     </div>
 
-     
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
