@@ -39,10 +39,10 @@ const cid = [
     const priceB = +document.querySelector('.bill').value
     const cachN = +document.querySelector('.payment').value
 
-    const change = cachN - priceB
+    const balance = cachN - priceB
     const cidarr = [a, b, c, d, e, f, g, h, k]
-    const wholeBalance = Math.floor(change)
-    const decimalBalance = change - Math.floor(balance)
+    const wholeBalance = Math.floor(balance)
+    const decimalBalance = balance - Math.floor(balance)
     let whole = 0
     let modolus = 0
     let sum = 0
@@ -57,9 +57,11 @@ const cid = [
 
     if (sum < balance) {
         document.querySelector('.display').innerHTML = JSON.stringify(obj1)
-    } else if (sum === change ) {
+    } else if (sum === balance ) {
         obj3.change = cid
         document.querySelector('.display').innerHTML = JSON.stringify(obj3)
+    } else if(balance < 0){
+      document.querySelector('.negative').innerHTML = 'payment can not be greater than bill' 
     }else { 
         if (cidarr[7] !== 0) {
             whole = Math.floor(wholeBalance / 20)
@@ -79,7 +81,7 @@ const cid = [
         }
 
         cid[7][1] = cidarr[7]
-        object2.change.push(cid[7])
+        obj2.change.push(cid[7])
         if (cidarr[6] !== 0 && cidarr[7] === 0) {
           whole = Math.floor(wholeBalance / 10)
           modolus = wholeBalance % 10
@@ -111,7 +113,7 @@ const cid = [
         }
 
         cid[6][1] = cidarr[6]
-    object2.change.push(cid[6])
+    obj2.change.push(cid[6])
 
     // test if value of key "five" and "ten" are not 0 otherwise we push directly to "cahnge"
     if (cidarr[5] !== 0) {
@@ -142,9 +144,8 @@ const cid = [
       }
     }
     cid[5][1] = cidarr[5]
-    object2.change.push(cid[5])
+    obj2.change.push(cid[5])
 
-    // test if value of the key "one" is not 0 otherwise we directly to 'change'
         // test if value of key "one" is not 0 otherwise we push directly to "change"
         if (cidarr[4] !== 0) {
             // test this to ensure that the program clearly remove what is needed
@@ -173,7 +174,7 @@ const cid = [
             }
           }
           cid[4][1] = cidarr[4]
-          object2.change.push(cid[4]) 
+          obj2.change.push(cid[4]) 
          // handeling the decimal part of the diffence btw N & B (balance)
     const dB = decimalBalance * 100 // multiply by 100 to take calculate the modolus and ease calculations
     let dBwhole = 0
@@ -193,7 +194,7 @@ const cid = [
       }
     }
     cid[3][1] = cidarr[3]
-    object2.change.push(cid[3])
+    obj2.change.push(cid[3])
     if (cidarr[2] !== 0) {
       if (x > cidarr[3]) {
         dBwhole = Math.floor((y + dBmodolus) / 10)
@@ -222,7 +223,7 @@ const cid = [
       }
     }
     cid[2][1] = cidarr[2]
-    object2.change.push(cid[2])
+    obj2.change.push(cid[2])
 
     if (cidarr[1] !== 0) {
       if (x > cidarr[2]) {
@@ -252,7 +253,7 @@ const cid = [
       }
     }
     cid[1][1] = cidarr[1]
-    object2.change.push(cid[1])
+    obj2.change.push(cid[1])
     if (cidarr[0] !== 0) {
       if (x > cidarr[1]) {
         dBwhole = Math.floor(y + dBmodolus)
@@ -281,7 +282,7 @@ const cid = [
       }
     }
     cid[0][1] = cidarr[0]
-    object2.change.push(cid[0])
+    obj2.change.push(cid[0])
      
      // We display the result (cid array)
 
